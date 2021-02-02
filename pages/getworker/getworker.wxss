@@ -1,0 +1,135 @@
+/**
+引入顶部nav/搜索/定位样式
+ */
+@import "/utils/publics/pagetitle.wxss";
+/**
+引入list样式
+ */
+@import "/utils/list.wxss";
+
+.recommend-unit {
+    height:80rpx;
+    width:95%;
+    margin:auto;
+    margin-top:50rpx;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:center;
+}
+.recommend-unit-font { font-size:36rpx; }
+.recommend-unit-more { font-size:28rpx; }
+/**
+精品岗位
+ */
+.selected-worker {
+    height:150rpx;
+    width:95%;
+    margin:auto;
+    margin-top:20rpx;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    padding:10rpx;
+    color:white;
+    background-color:darkolivegreen;
+    border-radius:10rpx;
+}
+.worker-position {
+    display:flex;
+    flex-direction:column;
+    flex:7;
+}
+.worker-name {
+    font-size:38rpx;
+    font-weight:600;
+    justify-content:flex-start;
+}
+.worker-wages {
+    flex:1;
+    font-size:24rpx;
+    display:flex;
+    align-items:flex-end;
+}
+.worker-distance {
+    font-size:24rpx;
+    margin-top:14rpx;
+    flex:3;
+    justify-content:flex-start;
+}
+/**
+修改list默认样式
+ */
+.unit-font {
+    flex:7;
+    display:flex;
+    justify-content:center;
+    color:gray;
+}
+.unit-handleList {
+    flex:3;
+    display:flex;
+    justify-content:center;
+}
+.attractions-select-marage { width:95%; }
+.listMerage {
+    width:95%;
+    margin:auto;
+}
+/**
+工作列表无限加载样式
+ */
+.worker-position-more {
+    width:95%;
+    margin:auto;
+    display:flex;
+    padding:10rpx;
+    justify-content:space-between;
+    box-shadow: 0rpx 20rpx 10rpx 0rpx rgba(204, 204, 204, 0.1);
+}
+.worker-data {
+    flex:6;
+}
+.worker-distance-image {
+    flex:4;
+    display:flex;
+    flex-direction:column;
+}
+.worker-data-name {
+    height:60rpx;
+    line-height:60rpx;
+}
+.worker-more-wages {
+    font-size:24rpx;
+    height:60rpx;
+    line-height:60rpx;
+    font-weight:500;
+    color:orangered;
+}
+.worker-corporate {
+    font-size:26rpx;
+    height:60rpx;
+    font-weight:500;
+    line-height:60rpx;
+    color:gray;
+}
+.worker-distance-font {
+    height:60rpx;
+    line-height:60rpx;
+    font-size:26rpx;
+    color:gray;
+    display:flex;
+    justify-content:flex-end;
+}
+.worker-distance-content {
+    height:120rpx;
+    width:100%;
+    display:flex;
+    flex-direction:row;
+}
+.worker-distance-content view { flex:1; }
+.worker-distance-content-right { border:1px solid #ccc; }
+.worker-distance-content-right image {
+    width:100%;
+    height:100%;
+}

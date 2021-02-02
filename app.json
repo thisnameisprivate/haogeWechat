@@ -1,0 +1,63 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/video/video",
+    "pages/message/message",
+    "pages/game/game",
+    "pages/my/my",
+    "pages/shopVill/shopVill",
+    "pages/common/common",
+    "pages/market/market",
+    "pages/getworker/getworker",
+    "pages/toHouse/toHouse",
+    "pages/renovation/renovation",
+    "pages/secondHand/secondHand"
+
+  ],
+
+  "permission":{
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fda89b",
+    "navigationBarTitleText": "浩格 · 予乐",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#D03136",
+    "selectedColor": "#D03136",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/titleImage/login.jpg",
+        "selectedIconPath": "images/titleImage/login.jpg"
+      },{
+        "pagePath": "pages/video/video",
+        "iconPath": "images/titleImage/video.jpg",
+        "selectedIconPath": "images/titleImage/video.jpg"
+      },{
+        "pagePath": "pages/message/message",
+        "iconPath": "images/titleImage/message.jpg",
+        "selectedIconPath": "images/titleImage/message.jpg"
+      },{
+        "pagePath": "pages/game/game",
+        "iconPath": "images/titleImage/qiandao.jpg",
+        "selectedIconPath": "images/titleImage/qiandao.jpg"
+      },{
+        "pagePath": "pages/my/my",
+        "iconPath": "images/titleImage/my.jpg",
+        "selectedIconPath": "images/titleImage/my.jpg"
+      }
+    ]
+  },
+  "style": "v2",
+  "usingComponents": {
+    "navBar": "/pages/component/navBar/navBar"
+  },
+  "sitemapLocation": "sitemap.json"
+}

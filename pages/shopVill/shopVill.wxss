@@ -1,0 +1,89 @@
+/* 引入List所用的CSS文件 */
+@import '/utils/list.wxss';
+@import '/utils/publics/scrollview.wxss';
+.titleHr {
+    line-height:28rpx;
+    width:95%;
+    display:flex;
+    margin: auto;
+    height:55rpx;
+    justify-content:center;
+    align-items:center;
+    margin-top:45rpx;
+}
+.title1 {
+    flex:7;
+    display:flex;
+}
+.title1-left{
+    display:flex;
+    font-size:36rpx;
+    color:#ff6666;
+}
+.title1-right{
+    font-size:28rpx;
+}
+.title2 {
+    flex:3;
+    font-size:28rpx;
+    text-align:right;
+}
+/* 人气推荐CSS样式 */
+.attractions-more {
+    font-size:36rpx;
+}
+.attractions-rec {
+    color:#ff9900;
+}
+/* 人气推荐下拉列表栏 */
+.listMerage {
+    height:80rpx;
+    display:flex;
+    flex-direction:row;
+    font-size:30rpx;
+}
+/* 全部景点 */
+.attractions-all-sort {
+    width:98%;
+    margin:auto;
+}
+.attractions-all-sort-unit {
+    width:100%;
+    height:200rpx;
+    display:flex;
+    flex-direction:row;
+    padding:15rpx;
+    background-color:rgba(204, 204, 204, 0.1);
+}
+.sort-unit-left {
+    height:100%;
+    flex:3;
+    border-radius:8rpx;
+    border:1px solid #ccc;
+}
+.sort-unit-left image {
+    width:100%;
+    height:100%;
+}
+.sort-unit-right {
+    height:100%;
+    flex:7;
+    border-radius:0 8rpx 8rpx 0;
+    display:flex;
+    flex-direction:column;
+}
+.sort-unit-right view {
+    margin-top:10rpx;
+    display:flex;
+    align-items:center;
+}
+.score-distance {
+    width:100%;
+    display:flex;
+    flex-direction:row;
+    font-size:26rpx;
+}
+.sort-unit-name { font-weight:600; font-size:36rpx; }
+.score { flex:9; }
+.theme { flex:9; }
+.sales { color:#ff9900; }

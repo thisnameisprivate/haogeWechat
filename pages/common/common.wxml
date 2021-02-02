@@ -1,0 +1,2 @@
+<navBar title="根据功能点击来确认" background='#fff' back="{{true}}" home="{{true}}" bindback="handlerGobackClick" bindtap="handleSearch">
+</navBar>

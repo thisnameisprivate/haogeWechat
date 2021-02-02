@@ -1,0 +1,111 @@
+<view class="topTitle">
+    <view class="topMap" bindtap="getgps">
+        <view class="topMapImg">
+            <image src="{{ mapImg }}"></image>
+        </view>
+        <view class="topMapText">
+            {{ Mapres }}
+        </view>
+    </view>
+    <view class="topSearch" bindtap="bindsearch">
+        <view class="searchImg">
+            <image src="{{ searchImg }}"></image>
+        </view>
+        <view class="searchText">
+            搜索你想知道的
+        </view>
+    </view>
+</view>
+<!-- 人气推荐 -->
+<view class="recommend-unit">
+    <view class="recommend-unit-font">人气推荐</view>
+    <view class="recommend-unit-more">更多推荐 ></view>
+</view>
+<!-- 人气推荐商品滚动 -->
+<view class="attractions market-attractions">
+    <scroll-view class="attractions-image-group" scroll-x="true">
+        <block wx:for="{{ secommends }}">
+        <view class="attractions-unit">
+            <view class="attractions-column">
+                <view class="attractions-unit-image">
+                    <image>
+                        {{ item.image }}
+                    </image>
+                </view>
+                <view class="rekuan-font">{{ item.text }}</view>
+                <view class="rekuan-vip">
+                    <view class="rekuan-vip-icon">
+                        <image src="../../images/titleImage/vip.jpg"></image>
+                    </view>
+                    <view class="rekuan-vip-font">
+                        会员省{{ item.vip }}元
+                    </view>
+                </view>
+                <view class="rekuan-money">¥19.9</view>
+            </view>
+        </view>
+        </block>
+    </scroll-view>
+</view>
+<!-- LIST下拉列表开始 -->
+<view class="attractions listMerage">
+    <view class="attractions-all">
+        全部景点
+    </view>
+    <view class="attractions-city attractions-select-unit" bindtap="handleListClick" data-index="city">
+        <view class="unit-font">
+            {{ listName.city }}
+        </view>
+        <view class="unit-handleList {{ handleListClickStatus.city?'open':'close'}}">
+            <image src="{{ handleList }}"></image>
+        </view>
+    </view>
+    <view class="attractions-sort attractions-select-unit" bindtap="handleListClick" data-index="sort">
+        <view class="unit-font">
+            {{ listName.sort }}
+        </view>
+        <view class="unit-handleList {{ handleListClickStatus.sort?'open':'close' }}">
+            <image src="{{ handleList }}"></image>
+        </view>
+    </view>
+    <view class="attractions-theme attractions-select-unit" bindtap="handleListClick" data-index="theme">
+        <view class="unit-font">
+            {{ listName.theme }}
+        </view>
+        <view class="unit-handleList {{ handleListClickStatus.theme?'open':'close' }}">
+            <image src="{{ handleList }}"></image>
+        </view>
+    </view>
+</view>
+<view class="attractions attractions-select-marage">
+    <view class="attractions-select-unit"></view>
+    <view class="attractions-select-unit select-unit" style="visibility:{{ isShow.city.visibility?'visible':'hidden' }};">
+        <view wx:for="{{ listDataCity }}" data-index="{{ item.cityName }}" data-label="city" bindtap="handleListClickText">{{ item.cityName }}</view>
+    </view>
+    <view class="attractions-select-unit select-unit" style="visibility:{{ isShow.sort.visibility?'visible':'hidden' }};">
+        <view wx:for="{{ listDataSort }}" data-index="{{ item.sortName }}" data-label="sort" bindtap="handleListClickText">{{ item.sortName }}</view>
+    </view>
+    <view class="attractions-select-unit select-unit" style="visibility:{{ isShow.theme.visibility?'visible':'hidden' }};">
+        <view wx:for="{{ listDataTheme }}" data-index="{{ item.themeName }}" data-label="theme" bindtap="handleListClickText">{{ item.themeName }}</view>
+    </view>
+</view>
+<!-- 无限加载列表 -->
+<view class="rekuanShop">
+    <block wx:for="{{ reachBottom }}">
+        <view class="rekuanShop-unit" wx:for="{{ item }}" wx:for-item="pageIndex">
+            <view class="rekuan-image">
+                <image src="{{}}"></image>
+            </view>
+            <view class="rekuan-font">{{ pageIndex.text }}</view>
+            <view class="rekuan-vip">
+                <view class="rekuan-vip-icon">
+                    <image src="../../images/titleImage/vip.jpg"></image>
+                </view>
+                <view class="rekuan-vip-font">
+                    会员省{{ pageIndex.vip }}元
+                </view>
+            </view>
+            <view class="rekuan-money">¥{{ pageIndex.money }}</view>
+        </view>
+    </block>
+</view>

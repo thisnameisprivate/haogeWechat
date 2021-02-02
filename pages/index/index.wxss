@@ -1,0 +1,296 @@
+/**
+引入顶部nav/搜索/定位样式
+ */
+@import "/utils/publics/pagetitle.wxss";
+/**
+/* 顶部轮播图CSS样式 */
+.topTitleContainer { 
+  height:100%;
+  width:100%;
+  padding-bottom:0rpx;
+}
+.topTitleContainer swiper{
+  height:380rpx;
+}
+.topTitleImage{
+  height:380rpx;
+  width:100%;
+  margin-bottom:0rpx;
+}
+/* title样式 */
+.titleContainer{
+  height:390rpx;
+  width:100%;
+  margin-top: 10rpx;
+  display:flex;
+  flex-direction:column;
+}
+.titleContainer-top{
+  flex:1;
+  width:100%;
+  display:flex;
+  flex-direction:row;
+}
+.titleContainer-bottom{
+  flex:1;
+  width:100%;
+  display:flex;
+  flex-direction:row;
+}
+.title{
+  flex:1; 
+  display:flex;
+  flex-direction:column;
+}
+.title .title-img{
+  flex:8;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+/* title-image 跟随父级调整大小, 父级元素尺寸单位为rpx */
+.title-img image {
+  height:50%;
+  width:52%;
+}
+.title .title-text{
+  flex:3;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:24rpx;
+}
+/* 滚动公告 */
+.news{
+  margin-top:50rpx;
+  height:220rpx;
+  width:100%;
+}
+.newsTitle{
+  height:100rpx;
+  display:flex;
+  flex-direction:row;
+}
+.newsTitleImg{
+  flex:0.8;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.newsTitleImg image {
+  height:40rpx;
+  width:40rpx;
+}
+.newsTitleText{
+  flex:9.2;
+  display:flex;
+  align-items:center;
+  font-size: 28rpx;
+  font-weight:700;
+}
+/* 公告下面的一条横线 */
+.line{
+  height:1px;
+  width:95%;
+  background: #ccc;
+  margin:0 auto;
+  opacity:0.2;
+}
+/* 新闻滚动样式 */
+.swiper_news {
+  margin:0 auto;
+  margin-top:10rpx;
+  margin-right:0rpx;
+  height:55rpx;
+  width:95%;
+}
+.swiper_container {
+  height:70rpx;
+  width:100%;
+}
+.swiper_item {
+  font-size: 24rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space:nowrap;
+  letter-spacing: 2rpx;
+}
+/* 咨询 */
+.advisory {
+  height:260rpx;
+  width:95%;
+  display:flex;
+  flex-direction:row;
+  margin:0 auto;
+}
+.advisoryMap {
+  height:100%;
+  flex:2;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+/* 小乐带你游图片样式 */
+.advisoryMap image {
+  height:70%;
+  width:100%;
+}
+/* 图片和新闻中间的那根渐变线、这代码写的真特码恶心 */
+.advisoryLine {
+  width:1rpx;
+  height:260rpx;
+  background:linear-gradient(244deg,rgba(204, 204, 204, 0.3) 0%,rgba(204, 204, 204, 0.3) 50%,rgba(204, 204, 204, 0.3) 100%);
+  margin-right:50rpx;
+  margin-left:15rpx;
+}
+.advisoryAdv {
+  height:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex:6;
+  flex-direction:column;
+}
+/* 今日快讯 */
+.advisoryAdv-top {
+  width:100%;
+  height:36rpx;
+  line-height:36rpx;
+  text-align:center;
+}
+.advisoryAdv-top image {
+  width:50%;
+  height:100%;
+}
+.advisoryAdv-center {
+  margin-top:10rpx;
+  font-size:20rpx;
+  width:100%;
+  height:56rpx;
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  white-space:nowrap;
+}
+.advisoryAdv-center view{
+  width:100%;
+}
+.advisoryAdv-bottom {
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  height:168rpx;
+}
+.advisoryAdv-bottom view {
+  font-size:20rpx;
+  display:flex;
+  align-items:center;
+}
+.swiper-today-container {
+  width:100%;
+  height:188rpx;
+}
+.swiper-today-item {
+  height:50rpx;
+  line-height:50rpx;
+}
+/* 今日热搜文本和图标样式 */
+.msgImage {
+  flex:1;
+  text-align:left;
+}
+.msgImage image {
+  height:32rpx;
+  width:32rpx;
+}
+.msgTitle {
+  flex:8;
+}
+/* 热款爆卖 */
+.rekuan {
+  width:95%;
+  height:65rpx;
+  margin:auto;
+  display:flex;
+  flex-direction:row;
+  margin-top:50rpx;
+}
+.rekuan-left {
+  flex:7;
+  display:flex;
+  align-items:center;
+}
+.rekuan-right {
+  flex:3;
+  font-size:28rpx;
+  color:rgba(204, 204, 204, 1);
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+}
+.rekuan image {
+  width:85%;
+  height:38rpx;
+}
+.rekuanShop {
+  width:95%;
+  margin:auto;
+  display:flex;
+  flex-direction:row;
+  flex-wrap:wrap;
+  justify-content:space-between;
+}
+.rekuanShop-unit {
+  width:49%;
+  display:flex;
+  flex-direction:column;
+  margin-top:25rpx;
+}
+.rekuan-image {
+  height:300rpx;
+  border:1px solid #ccc;
+}
+.rekuan-image image {
+  width:100%;
+  height:100%;
+}
+.rekuan-font {
+  height:80rpx;
+  font-size:28rpx;
+  font-weight:700;
+  width:100%;
+  display:flex;
+  flex-wrap:wrap;
+}
+.rekuan-vip {
+  height:30rpx;
+  display:flex;
+}
+.rekuan-vip-icon {
+  height:30rpx;
+  width:45rpx;
+  border:1rpx solid black;
+  border-right:0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.rekuan-vip-icon image {
+  height:26rpx;
+  width:45rpx;
+}
+.rekuan-vip-font {
+  border:1px solid black;
+  font-size:20rpx;
+  display:flex;
+  align-items:center;
+  border-radius:0rpx 7rpx 7rpx 0;
+  border-left:0;
+  padding-right:5rpx;
+}
+.rekuan-money {
+  height:40rpx;
+  font-size:28rpx;
+  color:red;
+  font-weight:700;
+}

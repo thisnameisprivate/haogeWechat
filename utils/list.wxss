@@ -1,0 +1,60 @@
+.listMerage {
+  height:80rpx;
+  display:flex;
+  flex-direction:row;
+  font-size:30rpx;
+}
+.attractions-select-unit {
+  display:flex;
+  flex-direction:row;
+  flex:1;
+  align-items:center;
+}
+.attractions-all {
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+}
+/* 下拉箭头图片样式 */
+.unit-font {
+  flex:9;
+  text-align:right;
+}
+.unit-handleList {
+  flex:1;
+  text-align:center;
+}
+.unit-handleList image {
+  height:20rpx;
+  width:18rpx;
+}
+/* 图片旋转 */
+.open {
+  transform: rotate(180deg);
+}
+/* 下拉列表信息 */
+.attractions-select-marage {
+  display:flex;
+  flex-direction:row;
+  font-size:28rpx;
+  z-index: 999;
+  position:absolute;
+  left:0;
+  right:0;
+  margin:auto;
+}
+.select-unit {
+  display:flex;
+  flex-direction:column;
+  /* background-color: rgb(114, 101, 101); */
+  padding: 0 10rpx;
+  flex:1;
+  animation: myfirst 0.5s;
+}
+.select-unit view{
+  width:100%;
+  text-align:center;
+  border:1px solid #ccc;
+  margin-top:5rpx;
+  color:gray;
+}

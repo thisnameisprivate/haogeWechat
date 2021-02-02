@@ -1,0 +1,98 @@
+<view class="topTitle">
+    <view class="topMap" bindtap="getgps">
+        <view class="topMapImg">
+            <image src="{{ mapImg }}"></image>
+        </view>
+        <view class="topMapText">
+            {{ Mapres }}
+        </view>
+    </view>
+    <view class="topSearch" bindtap="bindsearch">
+        <view class="searchImg">
+            <image src="{{ searchImg }}"></image>
+        </view>
+        <view class="searchText">
+            搜索你想知道的
+        </view>
+    </view>
+</view>
+
+<view class="recommend-unit">
+    <view class="recommend-unit-font">精选岗位</view>
+    <view class="recommend-unit-more">更多 ></view>
+</view>
+<view class="selected-worker">
+    <view class="worker-position">
+        <view class="worker-name">必胜客万博店招聘全职</view>
+        <view class="worker-wages">20k-25k/月</view>
+    </view>
+    <view class="worker-distance">距离你1266.0km</view>
+</view>
+<view class="selected-worker">
+    <view class="worker-position">
+        <view class="worker-name">在线售后客服</view>
+        <view class="worker-wages">3.2k-5k/月</view>
+    </view>
+    <view class="worker-distance">距离你999.0km</view>
+</view>
+
+<!-- LIST下拉列表开始 -->
+<view class="attractions listMerage">
+    <view class="attractions-city attractions-select-unit" bindtap="handleListClick" data-index="city">
+        <view class="unit-font">
+            {{ listName.city }}
+        </view>
+        <view class="unit-handleList {{ handleListClickStatus.city?'open':'close'}}">
+            <image src="{{ handleList }}"></image>
+        </view>|
+    </view>
+    <view class="attractions-sort attractions-select-unit" bindtap="handleListClick" data-index="sort">
+        <view class="unit-font">
+            {{ listName.sort }}
+        </view>
+        <view class="unit-handleList {{ handleListClickStatus.sort?'open':'close' }}">
+            <image src="{{ handleList }}"></image>
+        </view>|
+    </view>
+    <view class="attractions-theme attractions-select-unit" bindtap="handleListClick" data-index="theme">
+        <view class="unit-font">
+            {{ listName.theme }}
+        </view>
+        <view class="unit-handleList {{ handleListClickStatus.theme?'open':'close' }}">
+            <image src="{{ handleList }}"></image>
+        </view>
+    </view>
+</view>
+<view class="attractions attractions-select-marage">
+    <view class="attractions-select-unit select-unit" style="visibility:{{ isShow.city.visibility?'visible':'hidden' }};">
+        <view wx:for="{{ listDataCity }}" data-index="{{ item.cityName }}" data-label="city" bindtap="handleListClickText">{{ item.cityName }}</view>
+    </view>
+    <view class="attractions-select-unit select-unit" style="visibility:{{ isShow.sort.visibility?'visible':'hidden' }};">
+        <view wx:for="{{ listDataSort }}" data-index="{{ item.sortName }}" data-label="sort" bindtap="handleListClickText">{{ item.sortName }}</view>
+    </view>
+    <view class="attractions-select-unit select-unit" style="visibility:{{ isShow.theme.visibility?'visible':'hidden' }};">
+        <view wx:for="{{ listDataTheme }}" data-index="{{ item.themeName }}" data-label="theme" bindtap="handleListClickText">{{ item.themeName }}</view>
+    </view>
+</view>
+
+<!-- 工作无限加载列表  -->
+<view class="worker">
+    <block wx:for="{{ reachBottom }}">
+        <view class="worker-position-more" wx:for="{{ item }}" wx:for-item="pageIndex">
+            <view class="worker-data">
+                <view class="worker-name worker-data-name">{{ pageIndex.text }}</view>
+                <view class="worker-more-wages">{{ pageIndex.wages }}/月</view>
+                <view class="worker-corporate">{{ pageIndex.corporate }}</view>
+            </view>
+            <view class="worker-distance-image">
+                <view class="worker-distance-font">距离你{{ pageIndex.distance }}km</view>
+                <view class="worker-distance-content">
+                    <view class="worker-distance-content-left"></view>
+                    <view class="worker-distance-content-right">
+                        <image src="{{}}"></image>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </block>
+</view>

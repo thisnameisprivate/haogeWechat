@@ -1,0 +1,72 @@
+.attractions-unit-image {
+    border:1px solid #ccc;
+    height:300rpx;
+}
+.attractions-unit {
+    height:100%;
+}
+.attractions-column {
+    overflow:hidden;
+}
+.rekuan-font {
+    height:80rpx;
+    font-size:28rpx;
+    font-weight:700;
+    width:100%;
+    display:block;
+    white-space:pre-wrap;
+}
+.rekuan-vip {
+    height:30rpx;
+    display:flex;
+}
+.rekuan-vip-icon {
+    height:30rpx;
+    width:45rpx;
+    border:1px solid black;
+    border-right:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.rekuan-vip-icon image {
+    height:26rpx;
+    width:45rpx;
+}
+.rekuan-vip-font {
+    border:1px solid black;
+    font-size:20rpx;
+    display:flex;
+    align-items:center;
+    border-radius:0rpx 7rpx 7rpx 0;
+    border-left:0;
+    padding-right:5rpx;
+}
+.rekuan-money {
+    height:40rpx;
+    font-size:28rpx;
+    color:red;
+    font-weight:700;
+}
+.rekuanShop {
+    width:95%;
+    margin:auto;
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:space-between;
+}
+.rekuanShop-unit {
+    width:49%;
+    display:flex;
+    flex-direction:column;
+    margin-top:25rpx;
+}
+.rekuan-image {
+    height:300rpx;
+    border:1px solid #ccc;
+}
+.rekuan-image image {
+    width:100%;
+    height:100%;
+}

@@ -1,0 +1,55 @@
+.attractions {
+    height:320rpx;
+    width:95%;
+    margin:auto;
+    margin-top:20rpx;
+}
+.attractions-image-group {
+    height:100%;
+    width:100%;
+    display:flex;
+    flex-direction: row;
+    white-space:nowrap;
+}
+.attractions-unit {
+    display:inline-block;
+    width:260rpx;
+    height:300rpx;
+    margin-right:20rpx;
+    margin-bottom:20rpx;
+    border-radius:20rpx;
+    box-shadow: 10rpx 10rpx 5rpx 7rpx rgba(204, 204, 204, 0.1);
+}
+.attractions-column {
+    display:flex;
+    flex-direction:column;
+    height:100%;
+    width:100%;
+}
+.attractions-unit-image {
+    flex:5;
+}
+.attractions-unit-image image {
+    height:100%;
+    width:100%;
+}
+.attractions-unit-name {
+    font-size:30rpx;
+    flex:1.5;
+}
+.attractions-unit-price {
+    display:flex;
+    font-size:32rpx;
+    flex-direction:row;
+    align-items:center;
+    flex:2;
+}
+.attractions-unit-price view {
+    font-size:24rpx;
+    display:flex;
+    justify-content:center;
+}
+.attractions-unit-numPeople {
+    font-size:24rpx;
+    flex:1.5;
+}

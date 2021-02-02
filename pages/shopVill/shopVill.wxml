@@ -1,0 +1,139 @@
+<navBar title="{{searchText}}" background='#fff' back="{{true}}" home="{{true}}" bindback="handlerGobackClick" bindtap="handleSearch">
+</navBar>
+<view class="titleHr">
+    <view class="title1">
+        <view class="title1-left">
+            限时砍价
+        </view>
+        <view class="title1-right">
+            　砍得多·省的多
+        </view>
+    </view>
+    <view class="title2">更多砍价 ></view>
+</view>
+<!-- 景区横向滚动 -->
+<view class="attractions">
+    <scroll-view class="attractions-image-group" scroll-x="true">
+        <block wx:for="{{ attractions }}">
+            <view class="attractions-unit">
+                <view class="attractions-column">
+                    <view class="attractions-unit-image">
+                        <image>
+
+                        </image>
+                    </view>
+                    <view class="attractions-unit-name">{{ item.name }}</view>
+                    <view class="attractions-unit-price">¥{{ item.price }}　
+                        <view style="text-decoration:line-through;">{{ item.priceDis }}</view>
+                    </view>
+                    <view class="attractions-unit-numPeople">{{ item.numPeople }}人已砍价</view>
+                </view>
+            </view>
+        </block>
+    </scroll-view>
+</view>
+<!-- 人气推荐 -->
+<view class="titleHr">
+    <view class="title1 attractions-more">
+        人气推荐
+    </view>
+    <view class="title2">
+        更多景点 >
+    </view>
+</view>
+<!-- 人气推荐景区横向滚动 -->
+<view class="attractions">
+    <scroll-view class="attractions-image-group" scroll-x="true">
+        <block wx:for="{{ attractionsRec }}">
+            <view class="attractions-unit">
+                <view class="attractions-column">
+                    <view class="attractions-unit-image">
+                        <image>
+
+                        </image>
+                    </view>
+                    <view class="attractions-unit-name">{{ item.name }}</view>
+                    <view class="attractions-unit-price attractions-rec">{{ item.recImg }}　
+                        <view>{{ item.rec }}</view>
+                    </view>
+                    <view class="attractions-unit-numPeople">{{ item.numPeople }}条评价</view>
+                </view>
+            </view>
+        </block>
+    </scroll-view>
+</view>
+<!-- 为你优选 -->
+<view class="titleHr">
+    <view class="title1 attractions-more">
+        为你优选
+    </view>
+</view>
+<!-- 为你优选下拉列表栏 -->
+<view class="attractions listMerage">
+    <view class="attractions-all">
+        全部景点
+    </view>
+    <view class="attractions-city attractions-select-unit" bindtap="handleListClick" data-index="city">
+        <view class="unit-font">
+        {{ listName.city }}
+        </view>
+        <view class="unit-handleList {{ handleListClickStatus.city?'open':'close'}}">
+            <image src="{{ handleList }}"></image>
+        </view>
+    </view>
+    <view class="attractions-sort attractions-select-unit" bindtap="handleListClick" data-index="sort">
+        <view class="unit-font">
+            {{ listName.sort }}
+        </view>
+        <view class="unit-handleList {{ handleListClickStatus.sort?'open':'close' }}">
+            <image src="{{ handleList }}"></image>
+        </view>
+    </view>
+    <view class="attractions-theme attractions-select-unit" bindtap="handleListClick" data-index="theme">
+        <view class="unit-font">
+            {{ listName.theme }}
+        </view>
+        <view class="unit-handleList {{ handleListClickStatus.theme?'open':'close' }}">
+            <image src="{{ handleList }}"></image>
+        </view>
+    </view>
+</view>
+
+
+<view class="attractions attractions-select-marage">
+    <view class="attractions-select-unit"></view>
+    <view class="attractions-select-unit select-unit" style="visibility:{{ isShow.city.visibility?'visible':'hidden' }};">
+        <view wx:for="{{ listDataCity }}" data-index="{{ item.cityName }}" data-label="city" bindtap="handleListClickText">{{ item.cityName }}</view>
+    </view>
+    <view class="attractions-select-unit select-unit" style="visibility:{{ isShow.sort.visibility?'visible':'hidden' }};">
+        <view wx:for="{{ listDataSort }}" data-index="{{ item.sortName }}" data-label="sort" bindtap="handleListClickText">{{ item.sortName }}</view>
+    </view>
+    <view class="attractions-select-unit select-unit" style="visibility:{{ isShow.theme.visibility?'visible':'hidden' }};">
+        <view wx:for="{{ listDataTheme }}" data-index="{{ item.themeName }}" data-label="theme" bindtap="handleListClickText">{{ item.themeName }}</view>
+    </view>
+</view>
+
+<view class="attractions-all-sort">
+    <view class="attractions-all-sort-unit" wx:for="{{ attractionsSort }}">
+        <view class="sort-unit-left">
+            <image src="{{ item.image }}">
+                
+            </image>
+        </view>
+        <view class="sort-unit-right">
+            <view class="sort-unit-name">　{{ item.name }}</view>
+            <view class="score-distance">
+                <view class="score">
+                    　　{{ item.recImg }}　{{ item.rec }}分　¥{{ item.priceDis }}/人
+                </view>
+                <view class="distance">
+                    {{ item.distance }}m
+                </view>
+            </view>
+            <view class="score-distance">
+                <view class="theme">　　{{ item.theme }}</view>
+                <view class="sales">季度销量{{ item.numPeople }}</view>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,18 @@
+<view class="topTitle">
+    <view class="topMap" bindtap="getgps">
+        <view class="topMapImg">
+            <image src="{{ mapImg }}"></image>
+        </view>
+        <view class="topMapText">
+            {{ Mapres }}
+        </view>
+    </view>
+    <view class="topSearch" bindtap="bindsearch">
+        <view class="searchImg">
+            <image src="{{ searchImg }}"></image>
+        </view>
+        <view class="searchText">
+            搜索你想知道的
+        </view>
+    </view>
+</view>

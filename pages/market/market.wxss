@@ -1,0 +1,34 @@
+/**
+引入顶部nav/搜索/定位样式
+ */
+@import "/utils/publics/pagetitle.wxss";
+/**
+引入横向滚动列表样式(默认为景区滚动、如需要电商样式添加scrollview-shop.wxss)
+ */
+@import "/utils/publics/scrollview.wxss";
+/**
+引入电商样式(此样式一般和scrollview.wxss配合使用)
+ */
+@import "/utils/publics/scrollview-shop.wxss";
+/**
+引入list样式
+ */
+@import "/utils/list.wxss";
+
+.recommend-unit {
+    height:80rpx;
+    width:95%;
+    margin:auto;
+    margin-top:50rpx;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:center;
+}
+.recommend-unit-font { font-size:36rpx; }
+.recommend-unit-more { font-size:28rpx; }
+/**
+默认容器没有高度,根据适应场景需要(450rpx为最小容器高度)
+ */
+.market-attractions { height:450rpx; }
+.listMerage { margin-top:50rpx; }

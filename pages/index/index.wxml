@@ -1,0 +1,194 @@
+<view class="topTitle">
+  <view class="topMap" bindtap="getgps">
+    <view class="topMapImg">
+      <image src="{{ mapImg }}"></image>
+    </view>
+    <view class="topMapText">
+      {{ Mapres }}
+    </view>
+  </view>
+  <view class="topSearch" bindtap="bindsearch">
+    <view class="searchImg">
+      <image src="{{ searchImg }}"></image>
+    </view>
+    <view class="searchText">
+      搜索你想知道的
+    </view>
+  </view>
+</view>
+<view class="topTitleContainer">
+  <swiper autoplay="ture" interval="7000" duration="500">
+    <block wx:for="{{ topTitleImage }}">
+      <swiper-item>
+        <image class="topTitleImage" src="{{ item }}"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<view class="titleContainer">
+  <view class="titleContainer-top">
+    <view class="title_top_1 title" bindtap="shopVill" data-index="1">
+      <view class="title-img">
+        <image src="{{ titleImagegxb }}" ></image>
+      </view>
+      <view class="title-text">
+        逛乡坝
+      </view>
+    </view>
+    <view class="title_top_2 title" bindtap="shopVill" data-index="2">
+      <view class="title-img">
+        <image src="{{ titleImagemsh }}"></image>
+      </view>
+      <view class="title-text">
+        买山货
+      </view>
+    </view>
+    <view class="title_top_3 title" bindtap="shopVill" data-index="3">
+      <view class="title-img">
+        <image src="{{ titleImagedgz }}"></image>
+      </view>
+      <view class="title-text">
+        打馆子
+      </view>
+    </view>
+    <view class="title_top_4 title" bindtap="market" data-index="4">
+      <view class="title-img">
+        <image src="{{ titleImagegc }}"></image>
+      </view>
+      <view class="title-text">
+        赶场
+      </view>
+    </view>
+    <view class="title_top_5 title" bindtap="getworker" data-index="5">
+      <view class="title-img">
+        <image src="{{ titleImagezhl }}"></image>
+      </view>
+      <view class="title-text">
+        找活路
+      </view>
+    </view>
+  </view>
+  <view class="titleContainer-bottom">
+    <view class="title_bottom_1 title" bindtap="toHouse" data-index="6">
+      <view class="title-img">
+        <image src="{{ titleImagezfz }}"></image>
+      </view>
+      <view class="title-text">
+        找房子
+      </view>
+    </view>
+    <view class="title_bottom_2 title" bindtap="renovation" data-index="7">
+      <view class="title-img">
+        <image src="{{ titleImagelfz }}"></image>
+      </view>
+      <view class="title-text">
+        弄房子
+      </view>
+    </view>
+    <view class="title_bottom_3 title" bindtap="secondHand" data-index="8">
+      <view class="title-img">
+        <image src="{{ titleImagejhc }}"></image>
+      </view>
+      <view class="title-text">
+        旧货场
+      </view>
+    </view>
+    <view class="title_bottom_4 title">
+      <view class="title-img">
+        <image src="{{ titleImagewzk }}"></image>
+      </view>
+      <view class="title-text">
+        问知客
+      </view>
+    </view>
+    <view class="title_bottom_5 title">
+      <view class="title-img">
+        <image src="{{ titleImagegd }}"></image>
+      </view>
+      <view class="title-text">
+        更多
+      </view>
+    </view>
+  </view>
+</view>
+<view class="news">
+  <view class="newsTitle">
+    <view class="newsTitleImg">
+      <image src="../../images/titleImage/gb.png"></image>
+    </view>
+    <view class="newsTitleText">你可能想知道的</view>
+  </view>
+  <view class="line"></view>
+  <view class="swiper_news">
+    <swiper class="swiper_container" vertical="ture" autoplay="true" circular="true" interval="2000" display-multiple-items="2">
+      <block wx:for="{{ msgList }}">
+        <navigator url="/pages/index/index?title={{item.url}}">
+          <swiper-item>
+            <view class="swiper_item">{{ item.title }}</view>
+          </swiper-item>
+        </navigator>
+      </block>
+    </swiper>
+  </view>
+</view>
+<view class="advisory">
+  <view class="advisoryMap">
+    <image src="{{ mapplay }}"></image>
+  </view>
+  <view class="advisoryLine"></view>
+  <view class="advisoryAdv">
+    <view class="advisoryAdv-top">
+      <image src="{{ today }}"></image>
+    </view>
+    <view class="advisoryAdv-center">
+      <view class="msgImage">
+        <image src="{{ msgTodayOne.image }}"></image>
+      </view>
+        <navigator url="/pages/index/index?title={{ msgTodayOne.url }}">
+          <view class="msgTitle">{{ msgTodayOne.title }}</view>
+        </navigator>
+    </view>
+    <view class="advisoryAdv-bottom">
+      <swiper class="swiper_container swiper-today-container" vertical="ture" autoplay="true" circular="true" interval="2000" display-multiple-items="3">
+        <block wx:for="{{ msgToday }}">
+          <navigator url="/pages/index/index?title={{item.url}}">
+            <swiper-item>
+              <view>
+                <view class="msgImage">
+                <image src="{{ item.image }}"></image>
+              </view>
+              <view class="msgTitle swiper_item swiper-today-item">{{ item.title }}</view>
+              </view>
+            </swiper-item>
+          </navigator>
+        </block>
+      </swiper>
+    </view>
+  </view>
+</view>
+
+<view class="rekuan">
+  <view class="rekuan-left">
+    <image src="../../images/titleImage/rekuan.png"></image>
+  </view>
+  <view class="rekuan-right">更多 ></view>
+</view>
+<view class="rekuanShop">
+  <block wx:for="{{ reachBottom }}">
+      <view class="rekuanShop-unit" wx:for="{{ item }}" wx:for-item="pageIndex">
+        <view class="rekuan-image">
+          <image src="{{}}"></image>
+        </view>
+        <view class="rekuan-font">{{ pageIndex.text }}</view>
+        <view class="rekuan-vip">
+          <view class="rekuan-vip-icon">
+            <image src="../../images/titleImage/vip.jpg"></image>
+          </view>
+          <view class="rekuan-vip-font">
+            会员省{{ pageIndex.vip }}元
+          </view>
+        </view>
+        <view class="rekuan-money">¥{{ pageIndex.money }}</view>
+      </view>
+  </block>
+</view>
