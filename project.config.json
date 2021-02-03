@@ -84,6 +84,11 @@
                     "pathName": "pages/getworker/getworker",
                     "query": "",
                     "scene": null
+                },
+                {
+                    "name": "pages/toHouse/toHouse",
+                    "pathName": "pages/toHouse/toHouse",
+                    "scene": null
                 }
             ]
         }

@@ -16,3 +16,98 @@
         </view>
     </view>
 </view>
+<!-- 精品好房 -->
+<view class="boutique-house-font">
+    <view class="boutique">精品好房</view>
+    <view class="boutique-font">></view>
+</view>
+<!-- 精品好房横向滚动列表 -->
+<view class="attractions market-attractions">
+    <scroll-view class="attractions-image-group" scroll-x="true">
+        <block wx:for="{{ secommends }}">
+            <view class="attractions-unit">
+                <view class="attractions-column">
+                    <view class="attractions-unit-image">
+                        <image>
+                            {{ item.image }}
+                        </image>
+                    </view>
+                    <view class="rekuan-font">{{ item.num }}套房源</view>
+                </view>
+            </view>
+        </block>
+    </scroll-view>
+</view>
+<!-- LIST下拉列表开始 -->
+<view class="attractions listMerage">
+    <view class="attractions-city attractions-select-unit" bindtap="handleListClick" data-index="city">
+        <view class="unit-font">
+            {{ listName.city }}
+        </view>
+        <view class="unit-handleList {{ handleListClickStatus.city?'open':'close'}}">
+            <image src="{{ handleList }}"></image>
+        </view>
+    </view>
+    <view class="attractions-classification attractions-select-unit" bindtap="handleListClick" data-index="classification">
+        <view class="unit-font">
+            {{ listName.classification }}
+        </view>
+        <view class="unit-handleList {{ handleListClickStatus.classification?'open':'close'}}">
+            <image src="{{ handleList }}"></image>
+        </view>
+    </view>
+    <view class="attractions-sort attractions-select-unit" bindtap="handleListClick" data-index="sort">
+        <view class="unit-font">
+            {{ listName.sort }}
+        </view>
+        <view class="unit-handleList {{ handleListClickStatus.sort?'open':'close' }}">
+            <image src="{{ handleList }}"></image>
+        </view>
+    </view>
+    <view class="attractions-theme attractions-select-unit" bindtap="handleListClick" data-index="theme">
+        <view class="unit-font">
+            {{ listName.theme }}
+        </view>
+        <view class="unit-handleList {{ handleListClickStatus.theme?'open':'close' }}">
+            <image src="{{ handleList }}"></image>
+        </view>
+    </view>
+</view>
+<view class="attractions attractions-select-marage">
+    <view class="attractions-select-unit select-unit" style="visibility:{{ isShow.city.visibility?'visible':'hidden' }};">
+        <view wx:for="{{ listDataCity }}" data-index="{{ item.cityName }}" data-label="city" bindtap="handleListClickText">{{ item.cityName }}</view>
+    </view>
+    <view class="attractions-select-unit select-unit" style="visibility:{{ isShow.classification.visibility?'visible':'hidden' }};">
+        <view wx:for="{{ listClass }}" data-index="{{ item.className }}" data-label="classification" bindtap="handleListClickText">{{ item.className }}</view>
+    </view>
+    <view class="attractions-select-unit select-unit" style="visibility:{{ isShow.sort.visibility?'visible':'hidden' }};">
+        <view wx:for="{{ listDataSort }}" data-index="{{ item.sortName }}" data-label="sort" bindtap="handleListClickText">{{ item.sortName }}</view>
+    </view>
+    <view class="attractions-select-unit select-unit" style="visibility:{{ isShow.theme.visibility?'visible':'hidden' }};">
+        <view wx:for="{{ listDataTheme }}" data-index="{{ item.themeName }}" data-label="theme" bindtap="handleListClickText">{{ item.themeName }}</view>
+    </view>
+</view>
+
+<view class="house-more rekuanShop">
+    <block wx:for="{{ reachBottom }}">
+        <view class="house-unit rekuanShop-unit" wx:for="{{ item }}" wx:for-item="pageIndex">
+            <view class="house-image">
+                <view class="house-unit-image">
+                    <image src="{{pageIndex.image}}"></image>
+                </view>
+                <view class="house-unit-gps">
+                    <view class="house-unit-gps-image">
+                        <image src="{{ mapImg }}"></image>
+                    </view>
+                    <view class="house-unit-font">位于{{ pageIndex.address}}</view>
+                </view>
+                <view class="{{ pageIndex.status==''?'':'house-unit-status' }}">{{ pageIndex.status==''?'':pageIndex.status }}</view>
+            </view>
+            <view class="house-bottom-text">
+                <view class="house-text">{{ pageIndex.text }}</view>
+                <view class="house-maxmin">{{ pageIndex.room }}室{{ pageIndex.office }}厅{{ pageIndex.toilet }}卫 | {{ pageIndex.maxmin }} | {{ pageIndex.location }}</view>
+                <view class="house-wages">¥{{ pageIndex.wages }}/月</view>
+            </view>
+        </view>
+    </block>
+</view>

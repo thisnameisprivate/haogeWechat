@@ -50,7 +50,7 @@
 <!-- LIST下拉列表开始 -->
 <view class="attractions listMerage">
     <view class="attractions-all">
-        全部景点
+        全部
     </view>
     <view class="attractions-city attractions-select-unit" bindtap="handleListClick" data-index="city">
         <view class="unit-font">
