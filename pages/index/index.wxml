@@ -97,6 +97,9 @@
       <view class="title-img">
         <image src="{{ titleImagewzk }}"></image>
       </view>
+      <view class="contact-container">
+        <button open-type="contact"></button>
+      </view>
       <view class="title-text">
         问知客
       </view>

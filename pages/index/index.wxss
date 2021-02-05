@@ -235,3 +235,26 @@
   width:85%;
   height:38rpx;
 }
+/**
+客服
+ */
+button:not([size="mini"]) {
+  /**
+  宽度无效
+   */
+  height:100%;
+}
+.contact-container {
+  position:absolute;
+  height:100%;
+  width:100%;
+  opacity:0;
+  /**
+  将默认的button按钮超出范围隐藏起来
+   */
+  overflow:hidden;
+  z-index:1;
+}
+.title_bottom_4 {
+  position:relative;
+}
