@@ -9,7 +9,20 @@ Page({
         searchImg:  ['../../images/titleImage/search.png'],
         Mapres: "未找到当前位置信息",
         // 页面区分
-        initType: null
+        initType: null,
+        // list图标
+        handleList: "/images/titleImage/handleList.png",
+        // 下拉列表图标默认为0，关闭状态
+        handleListClickStatus:{
+            region:  false,
+            sort:  false,
+            screen: false,
+        },
+        isShow:{
+            region: {'visibility':false, 'index': 'region'},
+            sort: {'visibility':false, 'index': 'region'},
+            screen: {'visibility':false, 'index': 'region'}
+        },
     },
     // 改变当前位置, 并将新的结果储存到storage
     getgps: function () {
@@ -49,5 +62,40 @@ Page({
         wx.navigateTo({
             url: "../search/search?initType=" + this.data.initType
         })
+    },
+    /**
+     * @param { event } 标签分辨参数 region, sort, screen
+     * list点击事件
+     */
+    handleListClick: function (event) {
+        if (event.currentTarget.dataset.index == 'region') {
+            this.setData({
+                //更改图标class名改变样式
+                'handleListClickStatus.region': !this.data.handleListClickStatus.region,
+                'handleListClickStatus.sort':false,
+                'handleListClickStatus.screen':false,
+                //更改标签显示或隐藏状态
+                'isShow.region.visibility': !this.data.isShow.region.visibility,
+                'isShow.sort.visibility': false,
+                'isShow.screen.visibility': false,
+            })
+        }
+        if (event.currentTarget.dataset.index == 'sort') {
+            this.setData({
+                'handleListClickStatus.sort': !this.data.handleListClickStatus.sort,
+                'handleListClickStatus.region': false,
+                'handleListClickStatus.screen': false,
+                'isShow.sort.visibility': !this.data.isShow.sort.visibility,
+                'isShow.screen.visibility': false,
+                'isShow.region.visibility': false,
+            })
+        }
+        if (event.currentTarget.dataset.index == 'screen') {
+            this.setData({
+                'handleListClickStatus.screen': !this.data.handleListClickStatus.screen,
+                'handleListClickStatus.sort': false,
+                'handleListClickStatus.region': false,
+            })
+        }
     }
 })

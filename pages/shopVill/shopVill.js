@@ -141,65 +141,38 @@ Page({
      * 人气推荐下拉列表点击展示LIST
      */
     handleListClick : function (event) {
-        if (event.currentTarget.dataset.index == 'city') {
-        this.setData({
-            // 更改图标class名
-            'handleListClickStatus.city':!this.data.handleListClickStatus.city,
-            'handleListClickStatus.sort':false,
-            'handleListClickStatus.theme':false,
-            // 更改标签显示或隐藏状态
-            'isShow.city.visibility':!this.data.isShow.city.visibility,
-            'isShow.sort.visibility':false,
-            'isShow.theme.visibility':false
-        })
-        }
-        if (event.currentTarget.dataset.index == 'sort') {
-        this.setData({
-            'handleListClickStatus.sort':!this.data.handleListClickStatus.sort,
-            'handleListClickStatus.city':false,
-            'handleListClickStatus.theme':false,
-            'isShow.city.visibility':false,
-            'isShow.sort.visibility':!this.data.isShow.sort.visibility,
-            'isShow.theme.visibility':false
-        })
-        }
-        if (event.currentTarget.dataset.index == 'theme') {
-        this.setData({
-            'handleListClickStatus.theme':!this.data.handleListClickStatus.theme,
-            'handleListClickStatus.sort':false,
-            'handleListClickStatus.city':false,
-            'isShow.city.visibility':false,
-            'isShow.sort.visibility':false,
-            'isShow.theme.visibility':!this.data.isShow.theme.visibility
-        })
+        for (let i in this.data.handleListClickStatus) {
+            let handleValue = 'handleListClickStatus.'+i+''
+            let isShow      = 'isShow.'+i+'.visibility'
+            if (i == event.currentTarget.dataset.index) {
+                this.setData({
+                    [handleValue] : !this.data.handleListClickStatus[i],
+                    [isShow]      : !this.data.isShow[i].visibility
+                })
+            } else {
+                this.setData({
+                    [handleValue] : false,
+                    [isShow]      : false,
+                })
+            }
         }
     },
     /**
      * @param {event} 标签分辨参数 data-index
-     * 人气下拉列表点击更新 
+     * 人气下拉列表点击更新
      */
     handleListClickText: function (event) {
-        if (event.currentTarget.dataset.label == 'city') {
-        this.setData({
-            'handleListClickStatus.city':!this.data.handleListClickStatus.city,
-            'isShow.city.visibility':!this.data.isShow.city.visibility,
-            'listName.city': event.currentTarget.dataset.index
-            // 发送ajax更新数据操作
-        })
+        for (let i in this.data.handleListClickStatus) {
+            let handleStatus = 'handleListClickStatus.'+i+''
+            let isShow       = 'isShow.'+i+'.visibility'
+            let nameStatus   = 'listName.'+i+''
+            if (i == event.currentTarget.dataset.label) {
+                this.setData({
+                    [handleStatus] : !this.data.handleListClickStatus[i],
+                    [isShow]       : !this.data.isShow[i].visibility,
+                    [nameStatus]   : event.currentTarget.dataset.index
+                })
+            }
         }
-        if (event.currentTarget.dataset.label == 'sort') {
-        this.setData({
-            'handleListClickStatus.sort':!this.data.handleListClickStatus.sort,
-            'isShow.sort.visibility':!this.data.isShow.sort.visibility,
-            'listName.sort': event.currentTarget.dataset.index
-        })
-        }
-        if (event.currentTarget.dataset.label == 'theme') {
-        this.setData({
-            'handleListClickStatus.theme':!this.data.handleListClickStatus.theme,
-            'isShow.theme.visibility':!this.data.isShow.theme.visibility,
-            'listName.theme': event.currentTarget.dataset.index
-        })
-        }
-    }
+    },
 });

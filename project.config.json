@@ -88,6 +88,12 @@
                 {
                     "name": "pages/toHouse/toHouse",
                     "pathName": "pages/toHouse/toHouse",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/renovation/renovation",
+                    "pathName": "pages/renovation/renovation",
                     "scene": null
                 }
             ]

@@ -16,3 +16,25 @@
         </view>
     </view>
 </view>
+<view class="list-title">
+    <view class="region" bindtap="handleListClick" data-index="region">
+        <view class="region-font">区域</view>
+        <view class="region-img list-img">
+            <image src="{{ handleList }}"></image>
+        </view>
+    </view>
+    <view class="list-title-right">
+        <view class="sort" bindtap="handleListClick" data-index="sort">
+            <view class="comprehensive-sort">综合排序</view>
+            <view class="comprehensive-img list-img">
+                <image src="{{ handleList }}"></image>
+            </view>
+        </view>
+        <view class="screen" bindtap="handleListClick" data-index="screen">
+            <view class="screen-font">筛选</view>
+            <view class="screen-img list-img">
+                <image src="{{ handleList }}"></image>
+            </view>
+        </view>
+    </view>
+</view>

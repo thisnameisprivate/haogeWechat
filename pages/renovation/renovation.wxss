@@ -1,1 +1,36 @@
 @import "/utils/publics/pagetitle.wxss";
+
+
+.list-title {
+    height:80rpx;
+    width:95%;
+    display:flex;
+    flex-direction:row;
+    font-size:28rpx;
+    margin:auto;
+}
+.region {
+    flex:6;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+}
+.list-img image { width:24rpx; height:32rpx; }
+.list-title-right {
+    flex:4;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+}
+.sort {
+    flex:5;
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+}
+.screen {
+    flex:5;
+    display:flex;
+    flex-direction:row;
+    justify-content:flex-end;
+}
