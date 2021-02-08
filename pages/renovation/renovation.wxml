@@ -18,23 +18,67 @@
 </view>
 <view class="list-title">
     <view class="region" bindtap="handleListClick" data-index="region">
-        <view class="region-font">区域</view>
-        <view class="region-img list-img">
+        <view class="region-font">{{ listName.region }}</view>
+        <view class="region-img list-img {{ handleListClickStatus.region?'open':'close' }}">
             <image src="{{ handleList }}"></image>
         </view>
     </view>
     <view class="list-title-right">
         <view class="sort" bindtap="handleListClick" data-index="sort">
-            <view class="comprehensive-sort">综合排序</view>
-            <view class="comprehensive-img list-img">
+            <view class="comprehensive-sort">{{ listName.sort }}</view>
+            <view class="comprehensive-img list-img {{ handleListClickStatus.sort?'open':'close' }}">
                 <image src="{{ handleList }}"></image>
             </view>
         </view>
         <view class="screen" bindtap="handleListClick" data-index="screen">
-            <view class="screen-font">筛选</view>
-            <view class="screen-img list-img">
+            <view class="screen-font">{{ listName.screen }}</view>
+            <view class="screen-img list-img {{ handleListClickStatus.screen?'open':'close' }}">
                 <image src="{{ handleList }}"></image>
             </view>
         </view>
+    </view>
+</view>
+<view class="list-text">
+    <view class="region-text" style="visibility:{{ isShow.region.visibility?'visible':'hidden' }};">
+        <black wx:for="{{ listDataCity }}">
+            <view data-index="{{ item.cityName }}" data-label="region" bindtap="handleListClickText">{{ item.cityName }}</view>
+        </black>
+    </view>
+    <view class="sort-text" style="visibility:{{ isShow.sort.visibility?'visible':'hidden' }};">
+        <block wx:for="{{ listDataSort }}">
+            <view data-index="{{ item.sortName }}" data-label="sort" bindtap="handleListClickText">{{ item.sortName }}</view>
+        </block>
+    </view>
+    <view class="screen-text" style="visibility:{{ isShow.screen.visibility?'visible':'hidden' }};">
+        <form bindsubmit="formSubmit" bindreset="formReset">
+            <view class="house-class">户型类型</view>
+            <block wx:for="{{ screen }}" wx:for-index="listSort">
+                <view class="house-class-font">
+                    <block wx:for="{{ item }}">
+                        <view style="visibility:{{ item.className==null?'hidden':'' }}" class="{{item.className==null?'':'house-class-text'}} {{ item.isSelected?'selected':'' }}" data-index="{{ index }}" data-sort="{{ listSort }}" bindtap="selectApply">
+                            {{ item.className==null?'':item.className }}
+                        </view>
+                    </block>
+                </view>
+            </block>
+            <view class="house-class">风格偏好</view>
+            <block wx:for="{{ screenBottom }}" wx:for-index="listSort">
+                <view class="house-class-font">
+                    <block wx:for="{{ item }}">
+                        <view style="visibility:{{ item.className==null?'hidden':'' }}" class="{{item.className==null?'':'house-class-text'}} {{ item.isSelected?'selected':'' }}" data-index="{{ index }}" data-sort="{{ listSort }}"  bindtap="bottomSelectApply">
+                            {{ item.className==null?'':item.className }}
+                        </view>
+                    </block>
+                </view>
+            </block>
+            <view class="button-click">
+                <view>
+                    <button size="mini" type="default" form-type="reset" style="background-color:#FFFFFF; color:black; border:1px solid gray;">重置</button>
+                </view>
+                <view>
+                    <button size="mini" type="default" form-type="submit" style="background-color:#ff5722; color:white;">完成</button>
+                </view>
+            </view>
+        </form>
     </view>
 </view>

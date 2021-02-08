@@ -27,7 +27,6 @@ Page({
         // list图标
         handleList: "/images/titleImage/handleList.png",
         // 下拉列表图标默认为0，关闭状态
-        // 下拉列表图标默认为0，关闭状态
         handleListClickStatus:{
             city:  false,
             sort:  false,
