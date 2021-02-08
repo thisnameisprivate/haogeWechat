@@ -82,3 +82,101 @@
         </form>
     </view>
 </view>
+<view class="house-title">
+    <view class="house-title-unit">
+        <view data-index="{{ loadingTitle.recommend }}">{{ loadingTitle.recommend }}</view>
+        <view class="house-title-selected"></view>
+    </view>
+    <view data-index="{{ loadingTitle.homede }}">{{ loadingTitle.homede }}</view>
+    <view data-index="{{ loadingTitle.workerde }}">{{ loadingTitle.workerde }}</view>
+    <view data-index="{{ loadingTitle.villa }}">{{ loadingTitle.villa }}</view>
+    <view data-index="{{ loadingTitle.build }}">{{ loadingTitle.build }}</view>
+    <view></view>
+    <view></view>
+</view>
+<view class="house-page-unit">
+    <view class="house-unit">
+        <view class="house-unit-image">
+            <image src="{{}}"></image>
+        </view>
+        <view class="house-unit-right">
+            <view class="house-unit-font house-unit-textcontent">
+                <view class="house-unit-font-text">广元实创装饰</view>
+                <view class="house-unit-isauth">认证</view>
+            </view>
+            <view class="house-unit-comment house-unit-textcontent">
+                <view class="house-unit-comment-image">★★★★★　</view>
+                <view class="house-unit-comment-isComm">暂无评论</view>
+            </view>
+            <view class="house-unit-comment-font">设计7.8　|　施工8.4　|　服务8.4</view>
+            <view class="house-unit-label">
+                <view>免费设计</view>
+                <view>免费量房</view>
+                <view>免费报价</view>
+            </view>
+        </view>
+    </view>
+    <view class="house-unit">
+        <view class="house-unit-image">
+            <image src="{{}}"></image>
+        </view>
+        <view class="house-unit-right">
+            <view class="house-unit-font house-unit-textcontent">
+                <view class="house-unit-font-text">广元实创装饰</view>
+                <view class="house-unit-isauth">认证</view>
+            </view>
+            <view class="house-unit-comment house-unit-textcontent">
+                <view class="house-unit-comment-image">★★★★★　</view>
+                <view class="house-unit-comment-isComm">暂无评论</view>
+            </view>
+            <view class="house-unit-comment-font">设计7.8　|　施工8.4　|　服务8.4</view>
+            <view class="house-unit-label">
+                <view>免费设计</view>
+                <view>免费量房</view>
+                <view>免费报价</view>
+            </view>
+        </view>
+    </view>
+    <view class="house-unit">
+        <view class="house-unit-image">
+            <image src="{{}}"></image>
+        </view>
+        <view class="house-unit-right">
+            <view class="house-unit-font house-unit-textcontent">
+                <view class="house-unit-font-text">广元实创装饰</view>
+                <view class="house-unit-isauth">认证</view>
+            </view>
+            <view class="house-unit-comment house-unit-textcontent">
+                <view class="house-unit-comment-image">★★★★★　</view>
+                <view class="house-unit-comment-isComm">暂无评论</view>
+            </view>
+            <view class="house-unit-comment-font">设计7.8　|　施工8.4　|　服务8.4</view>
+            <view class="house-unit-label">
+                <view>免费设计</view>
+                <view>免费量房</view>
+                <view>免费报价</view>
+            </view>
+        </view>
+    </view>
+    <view class="house-unit">
+        <view class="house-unit-image">
+            <image src="{{}}"></image>
+        </view>
+        <view class="house-unit-right">
+            <view class="house-unit-font house-unit-textcontent">
+                <view class="house-unit-font-text">广元实创装饰</view>
+                <view class="house-unit-isauth">认证</view>
+            </view>
+            <view class="house-unit-comment house-unit-textcontent">
+                <view class="house-unit-comment-image">★★★★★　</view>
+                <view class="house-unit-comment-isComm">暂无评论</view>
+            </view>
+            <view class="house-unit-comment-font">设计7.8　|　施工8.4　|　服务8.4</view>
+            <view class="house-unit-label">
+                <view>免费设计</view>
+                <view>免费量房</view>
+                <view>免费报价</view>
+            </view>
+        </view>
+    </view>
+</view>

@@ -18,6 +18,14 @@ Page({
             sort:  false,
             screen: false,
         },
+        // 无限加载分类title栏名称
+        loadingTitle: {
+            recommend: '推荐',
+            homede: '家装',
+            workerde: '工装',
+            villa: '别墅',
+            build: '建材'
+        },
         // list title栏名称
         listName: {
             region: '区域',

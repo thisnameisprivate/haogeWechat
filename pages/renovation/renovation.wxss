@@ -43,7 +43,7 @@ list下拉列表选项
 .list-text {
     display:flex;
     flex-direction:row;
-    position:relative;
+    position:absolute;
     width:95%;
     margin:auto;
 }
@@ -115,4 +115,120 @@ list下拉列表选项
 }
 .selected {
     background-color:#ff5722;
+}
+/**
+标题选项
+ */
+.house-title {
+    display:flex;
+    flex-direction:row;
+    width: 95%;
+    margin:auto;
+    height:80rpx;
+}
+.house-title view {
+    flex:1;
+    font-size:36rpx;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    align-items:center;
+}
+.house-title-unit view {
+    flex:9;
+}
+.house-title-selected {
+    flex:1;
+    margin-top:10rpx;
+    border-top:2rpx solid red;
+    width:50%;
+    display:flex;
+    align-items:flex-start;
+}
+.house-page-unit {
+    width:100%;
+    margin:auto;
+    background-color:rgba(204, 204, 204, 0.1);
+}
+.house-unit {
+    width:95%;
+    margin:auto;
+    display:flex;
+    flex-direction:row;
+    margin-top:20rpx;
+    background-color:white;
+}
+.house-unit-image {
+    flex:3.5;
+    border:1px solid #ccc;
+    height:260rpx;
+}
+.house-unit-image image {
+    height:100%;
+    width:100%;
+}
+.house-unit-right {
+    flex:6.5;
+}
+.house-unit-textcontent {
+    display:flex;
+    flex-direction:row;
+}
+.house-unit-font {
+    height:80rpx;
+    width:100%;
+}
+.house-unit-font-text {
+    font-size:36rpx;
+    font-weight:600;
+    flex:8;
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+}
+.house-unit-isauth {
+    font-size:24rpx;
+    height:40rpx;
+    margin-top:15rpx;
+    width:60rpx;
+    text-align:center;
+    padding:2rpx;
+    background-color:rgba(204, 204, 204, 0.1);
+    border-radius:2rpx;
+}
+.house-unit-comment {
+    height:50rpx;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+}
+.house-unit-comment-image {
+    color:#ff5722;
+    flex:4;
+    display:flex;
+}
+.house-unit-comment-isComm {
+    font-size:28rpx;
+    flex:6;
+}
+.house-unit-comment-font {
+    height:50rpx;
+    font-size:28rpx;
+    color:gray;
+}
+.house-unit-label {
+    height:80rpx;
+    width:100%;
+    display:flex;
+    flex-direction:row;
+    font-size:24rpx;
+}
+.house-unit-label view {
+    height:50rpx;
+    margin-right:10rpx;
+    margin-top:15rpx;
+    line-height: 50rpx;
+    padding-left:10rpx;
+    padding-right:10rpx;
+    border-radius:5rpx;
 }
