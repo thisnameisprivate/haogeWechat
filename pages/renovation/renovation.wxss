@@ -46,6 +46,7 @@ list下拉列表选项
     position:absolute;
     width:95%;
     margin:auto;
+    height:0rpx;
 }
 .region-text {
     flex:6;
@@ -93,6 +94,12 @@ list下拉列表选项
     border-radius:5rpx;
     justify-content:center;
     background-color:#E6E6E6;
+}
+/**
+下拉列表样式背景
+ */
+.list-background {
+    background-color:white;
 }
 /**
 下拉列表按钮样式
@@ -145,6 +152,7 @@ list下拉列表选项
     display:flex;
     align-items:flex-start;
 }
+.house-title-font-weight { font-weight:600; }
 .house-page-unit {
     width:100%;
     margin:auto;

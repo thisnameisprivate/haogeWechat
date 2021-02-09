@@ -26,6 +26,13 @@ Page({
             villa: '别墅',
             build: '建材'
         },
+        indexIsShow : {
+            recommend: {'selected': true, 'index': 'recommend'},
+            homede: {'selected': false, 'index': 'homede'},
+            workerde: {'selected': false, 'index': 'workerde'},
+            villa: {'selected': false, 'index': 'villa'},
+            build: {'selected': false, 'index': 'build'},
+        },
         // list title栏名称
         listName: {
             region: '区域',
@@ -302,6 +309,22 @@ Page({
         this.setData({
             screen: this.data.screen,
             screenBottom: this.data.screenBottom
+        })
+    },
+    /**
+     * 无限加载title切换
+     * @param event
+     */
+    isShowIndexClick: function (event) {
+        for (let i in this.data.loadingTitle) {
+            if (this.data.loadingTitle[i] == event.currentTarget.dataset.index) {
+                this.data.indexIsShow[i].selected = !this.data.indexIsShow[i].selected
+            } else {
+                this.data.indexIsShow[i].selected = false
+            }
+        }
+        this.setData({
+            indexIsShow:this.data.indexIsShow
         })
     }
 })

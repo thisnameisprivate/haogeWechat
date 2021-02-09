@@ -50,47 +50,61 @@
         </block>
     </view>
     <view class="screen-text" style="visibility:{{ isShow.screen.visibility?'visible':'hidden' }};">
-        <form bindsubmit="formSubmit" bindreset="formReset">
-            <view class="house-class">户型类型</view>
-            <block wx:for="{{ screen }}" wx:for-index="listSort">
-                <view class="house-class-font">
-                    <block wx:for="{{ item }}">
-                        <view style="visibility:{{ item.className==null?'hidden':'' }}" class="{{item.className==null?'':'house-class-text'}} {{ item.isSelected?'selected':'' }}" data-index="{{ index }}" data-sort="{{ listSort }}" bindtap="selectApply">
-                            {{ item.className==null?'':item.className }}
-                        </view>
-                    </block>
+        <view class="list-background">
+            <form bindsubmit="formSubmit" bindreset="formReset">
+                <view class="house-class">户型类型</view>
+                <block wx:for="{{ screen }}" wx:for-index="listSort">
+                    <view class="house-class-font">
+                        <block wx:for="{{ item }}">
+                            <view style="visibility:{{ item.className==null?'hidden':'' }}" class="{{item.className==null?'':'house-class-text'}} {{ item.isSelected?'selected':'' }}" data-index="{{ index }}" data-sort="{{ listSort }}" bindtap="selectApply">
+                                {{ item.className==null?'':item.className }}
+                            </view>
+                        </block>
+                    </view>
+                </block>
+                <view class="house-class">风格偏好</view>
+                <block wx:for="{{ screenBottom }}" wx:for-index="listSort">
+                    <view class="house-class-font">
+                        <block wx:for="{{ item }}">
+                            <view style="visibility:{{ item.className==null?'hidden':'' }}" class="{{item.className==null?'':'house-class-text'}} {{ item.isSelected?'selected':'' }}" data-index="{{ index }}" data-sort="{{ listSort }}"  bindtap="bottomSelectApply">
+                                {{ item.className==null?'':item.className }}
+                            </view>
+                        </block>
+                    </view>
+                </block>
+                <view class="button-click">
+                    <view>
+                        <button size="mini" type="default" form-type="reset" style="background-color:#FFFFFF; color:black; border:1px solid gray;">重置</button>
+                    </view>
+                    <view>
+                        <button size="mini" type="default" form-type="submit" style="background-color:#ff5722; color:white;">完成</button>
+                    </view>
                 </view>
-            </block>
-            <view class="house-class">风格偏好</view>
-            <block wx:for="{{ screenBottom }}" wx:for-index="listSort">
-                <view class="house-class-font">
-                    <block wx:for="{{ item }}">
-                        <view style="visibility:{{ item.className==null?'hidden':'' }}" class="{{item.className==null?'':'house-class-text'}} {{ item.isSelected?'selected':'' }}" data-index="{{ index }}" data-sort="{{ listSort }}"  bindtap="bottomSelectApply">
-                            {{ item.className==null?'':item.className }}
-                        </view>
-                    </block>
-                </view>
-            </block>
-            <view class="button-click">
-                <view>
-                    <button size="mini" type="default" form-type="reset" style="background-color:#FFFFFF; color:black; border:1px solid gray;">重置</button>
-                </view>
-                <view>
-                    <button size="mini" type="default" form-type="submit" style="background-color:#ff5722; color:white;">完成</button>
-                </view>
-            </view>
-        </form>
+            </form>
+        </view>
     </view>
 </view>
 <view class="house-title">
     <view class="house-title-unit">
-        <view data-index="{{ loadingTitle.recommend }}">{{ loadingTitle.recommend }}</view>
-        <view class="house-title-selected"></view>
+        <view data-index="{{ loadingTitle.recommend }}" bindtap="isShowIndexClick" class="{{ indexIsShow.recommend.selected?'house-title-font-weight':'' }}">{{ loadingTitle.recommend }}</view>
+        <view class="{{ indexIsShow.recommend.selected?'house-title-selected':'' }}"></view>
     </view>
-    <view data-index="{{ loadingTitle.homede }}">{{ loadingTitle.homede }}</view>
-    <view data-index="{{ loadingTitle.workerde }}">{{ loadingTitle.workerde }}</view>
-    <view data-index="{{ loadingTitle.villa }}">{{ loadingTitle.villa }}</view>
-    <view data-index="{{ loadingTitle.build }}">{{ loadingTitle.build }}</view>
+    <view class="house-title-unit">
+        <view data-index="{{ loadingTitle.homede }}" bindtap="isShowIndexClick" class="{{ indexIsShow.homede.selected?'house-title-font-weight':'' }}">{{ loadingTitle.homede }}</view>
+        <view class="{{ indexIsShow.homede.selected?'house-title-selected':'' }}"></view>
+    </view>
+    <view class="house-title-unit">
+        <view data-index="{{ loadingTitle.workerde }}" bindtap="isShowIndexClick" class="{{ indexIsShow.workerde.selected?'house-title-font-weight':'' }}">{{ loadingTitle.workerde }}</view>
+        <view class="{{ indexIsShow.workerde.selected?'house-title-selected':'' }}"></view>
+    </view>
+    <view class="house-title-unit">
+        <view data-index="{{ loadingTitle.villa }}" bindtap="isShowIndexClick" class="{{ indexIsShow.villa.selected?'house-title-font-weight':'' }}">{{ loadingTitle.villa }}</view>
+        <view class="{{ indexIsShow.villa.selected?'house-title-selected':'' }}"></view>
+    </view>
+    <view class="house-title-unit">
+        <view data-index="{{ loadingTitle.build }}" bindtap="isShowIndexClick" class="{{ indexIsShow.build.selected?'house-title-font-weight':'' }}">{{ loadingTitle.build }}</view>
+        <view class="{{ indexIsShow.build.selected?'house-title-selected':'' }}"></view>
+    </view>
     <view></view>
     <view></view>
 </view>
