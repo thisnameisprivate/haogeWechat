@@ -3,6 +3,14 @@
 引入横向滚动列表样式(默认为景区滚动、如需要电商样式添加scrollview-shop.wxss)
  */
 @import "/utils/publics/scrollview.wxss";
+/**
+引入list样式
+ */
+@import "/utils/list.wxss";
+/**
+引入无限加载商品样式
+ */
+@import "/utils/publics/scrollview-shop.wxss";
 
 .top-class-title {
     display:flex;
@@ -18,4 +26,133 @@
     line-height:80rpx;
     font-size:28rpx;
     font-weight:600;
+}
+/**
+排序选择tabbar样式
+ */
+.top-tabbar {
+    height:80rpx;
+    width:95%;
+    margin:auto;
+    display:flex;
+    flex-direction:row;
+    font-size:32rpx;
+    color:gray;
+}
+.tabbar-unit-color {
+    color:green;
+    font-weight:600;
+}
+.tabbar-unit {
+    flex:1;
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    line-height:80rpx;
+}
+.unit-color {
+    flex:8;
+    display:flex;
+    justify-content:flex-end;
+}
+.unit-img {
+    flex:2;
+    text-align:center;
+}
+.unit-img image {
+    width:28rpx;
+    height:32rpx;
+}
+/**
+tabbar 成色额外选项样式
+ */
+.tabbar-text {
+    width:95%;
+    height:300rpx;
+    margin:auto;
+    position:absolute;
+    right:0rpx;
+    display:flex;
+    flex-direction:row;
+}
+.tabbar-text view {
+    flex:1;
+}
+.cond-list {
+    display:flex;
+    flex-direction:column;
+}
+.cond-list view {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:28rpx;
+    background-color:#e6e6e6;
+    margin:5rpx;
+    padding:5rpx;
+    border-radius:5rpx;
+    position: relative;
+    z-index:999;
+}
+.house-image {
+    height:300rpx;
+    width:100%;
+    position:relative;
+    margin-bottom:10rpx;
+}
+.house-unit-image {
+    height:300rpx;
+    width:100%;
+}
+.house-unit-image image {
+    width:100%;
+    height:100%;
+    background-color:darkolivegreen;
+    border-radius: 10rpx 10rpx 0 0;
+}
+.house-bottom-text {
+    width:100%;
+    border-top:0;
+    border-radius:0rpx 0rpx 10rpx 10rpx;
+    padding:5rpx;
+    padding-bottom:10rpx;
+    box-shadow: 10rpx 10rpx 5rpx 7rpx rgba(204, 204, 204, 0.1);
+}
+.house-text {
+    height:80rpx;
+    width:100%;
+    font-size:26rpx;
+    font-weight:600;
+}
+.house-maxmin {
+    height:60rpx;
+    width:100%;
+    font-size:24rpx;
+    color:grap;
+    font-weight: 600;
+    display:flex;
+    align-items:center;
+}
+.house-wages {
+    height:40rpx;
+    color:red;
+    font-size:26rpx;
+}
+.house-maxmin {
+    color: #ff0000;
+}
+.size {
+    position:absolute;
+    z-index:998;
+    bottom:10rpx;
+    left:28%;
+    font-size:24rpx;
+    color:white;
+    width:35%;
+    height:40rpx;
+    text-align:center;
+    line-height:40rpx;
+    border-radius:50rpx;
+    background-color:#66ccff;
+    opacity: 0.3;
 }

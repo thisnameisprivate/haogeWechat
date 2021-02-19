@@ -25,3 +25,52 @@
     </block>
 </scroll-view>
 </view>
+<!-- 排序选项tabbar -->
+<view class="top-tabbar">
+    <view class="tabbar-unit tabbar-unit-color">{{ tabbarHandleList.all }}</view>
+    <view class="tabbar-unit {{tabbarHandleListIsShow.num?'tabbar-unit-color':''}}" bindtap="tabbarHandle" data-index="{{ tabbarHandleList.num }}">
+        <view class="unit-color">{{ tabbarHandleList.num }}</view>
+        <view class="unit-img {{tabbarHandleListIsShow.num?'open':''}}">
+            <image src="{{ handleList }}"></image>
+        </view>
+    </view>
+    <view class="tabbar-unit {{tabbarHandleListIsShow.price?'tabbar-unit-color':''}}" bindtap="tabbarHandle" data-index="{{ tabbarHandleList.price }}">
+        <view class="unit-color">{{ tabbarHandleList.price }}</view>
+        <view class="unit-img {{tabbarHandleListIsShow.price?'open':''}}">
+            <image src="{{ handleList }}"></image>
+        </view>
+    </view>
+    <view class="tabbar-unit {{tabbarHandleListIsShow.cond?'tabbar-unit-color':''}}" bindtap="tabbarHandle" data-index="{{ tabbarHandleList.cond }}">
+        <view class="unit-color">{{ tabbarHandleList.cond }}</view>
+        <view class="unit-img {{tabbarHandleListIsShow.cond?'open':''}}">
+            <image src="{{ handleList }}"></image>
+        </view>
+    </view>
+</view>
+<!-- 成色选项面板 -->
+<view class="tabbar-text">
+    <view></view>
+    <view></view>
+    <view></view>
+    <view class="cond-list" style="visibility:{{tabbarHandleListIsShow.cond?'visible':'hidden'}}">
+        <view wx:for="{{ cond }}" bindtap="condHandle" data-index="{{ item.name }}">{{ item.name }}</view>
+    </view>
+</view>
+<!-- 商品无限加载列表 -->
+<view class="house-more rekuanShop">
+    <block wx:for="{{ reachBottom }}">
+    <view class="house-unit rekuanShop-unit" wx:for="{{ item }}" wx:for-item="pageIndex">
+        <view class="house-image">
+            <view class="house-unit-image">
+                <image src="{{ pageIndex.image }}"></image>
+            </view>
+            <view class="size">尺码：{{ pageIndex.size }}</view>
+        </view>
+        <view class="house-bottom-text">
+            <view class="house-text">{{ pageIndex.text }}</view>
+            <view class="house-maxmin">¥{{ pageIndex.money }}　<text style="color:gray;text-decoration:line-through">{{pageIndex.dis}}</text></view>
+            <view class="house-wages">{{ pageIndex.selfup?'自营　':'' }}<text style="color:gray;">{{pageIndex.comment}}条评论</text></view>
+        </view>
+    </view>
+    </block>
+</view>
