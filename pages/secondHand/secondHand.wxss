@@ -1,1 +1,21 @@
 @import "/utils/publics/pagetitle.wxss";
+/**
+引入横向滚动列表样式(默认为景区滚动、如需要电商样式添加scrollview-shop.wxss)
+ */
+@import "/utils/publics/scrollview.wxss";
+
+.top-class-title {
+    display:flex;
+    flex-direction:row;
+    width:100%;
+    height:80rpx;
+}
+.class-unit {
+    display:inline-block;
+    width:130rpx;
+    height:100%;
+    text-align:center;
+    line-height:80rpx;
+    font-size:28rpx;
+    font-weight:600;
+}

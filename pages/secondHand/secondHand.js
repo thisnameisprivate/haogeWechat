@@ -9,7 +9,19 @@ Page({
         searchImg:  ['../../images/titleImage/search.png'],
         Mapres: "未找到当前位置信息",
         // 页面区分
-        initType: null
+        initType: null,
+        // 顶部title分类
+        classUnit:[
+            {'name': '手机通讯'},
+            {'name': '电脑数码'},
+            {'name': '运动鞋靴'},
+            {'name': '精品服饰'},
+            {'name': '钟表奢品'},
+            {'name': '母婴玩具'},
+            {'name': '家居车品'},
+            {'name': '家用电器'},
+            {'name': '全部商品'},
+        ],
     },
     // 改变当前位置, 并将新的结果储存到storage
     getgps: function () {

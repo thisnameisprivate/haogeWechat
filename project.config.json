@@ -94,6 +94,12 @@
                 {
                     "name": "pages/renovation/renovation",
                     "pathName": "pages/renovation/renovation",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/secondHand/secondHand",
+                    "pathName": "pages/secondHand/secondHand",
                     "scene": null
                 }
             ]

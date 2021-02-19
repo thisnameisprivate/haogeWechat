@@ -16,3 +16,12 @@
         </view>
     </view>
 </view>
+<view class="top-class-title">
+<scroll-view class="attractions-image-group" scroll-x="true">
+    <block wx:for="{{ classUnit }}">
+        <view class="class-unit">
+            {{ item.name }}
+        </view>
+    </block>
+</scroll-view>
+</view>
