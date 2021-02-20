@@ -5,7 +5,7 @@
     display:flex;
     flex-direction:row;
     padding-bottom:20rpx;
-    background-color:#fda89b;
+    background-color:#b7e1f9;
 }
 .topMap{
     flex:4;

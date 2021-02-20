@@ -16,8 +16,9 @@ Page({
   data: {
     topTitleImage: 
     [
-      // '../../images/j.png',
-        "../../images/happynewyear.png"
+        "../../images/01.jpg",
+        "../../images/02.jpg",
+        "../../images/03.jpg"
     ],
     /**
      * 
