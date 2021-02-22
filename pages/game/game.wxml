@@ -1,2 +1,20 @@
-<!--pages/game/game.wxml-->
-<text>pages/game/game.wxml</text>
+<view class="date-title">
+    <view class="date-title-container">
+        <view>{{ todayTime }}</view>
+        <view>本月已签到xx天</view>
+    </view>
+</view>
+<view class="date-month">
+    <view class="date-unit">
+        <view></view>
+        <view></view>
+    </view>
+    <view class="date-unit">
+        <view></view>
+        <view></view>
+    </view>
+    <view class="date-unit" wx:for="{{ monthNum }}" style="{{ item.date == date?'background-color:green':'' }}">
+        <view>{{ item.day }}</view>
+        <view>{{ item.date }}</view>
+    </view>
+</view>

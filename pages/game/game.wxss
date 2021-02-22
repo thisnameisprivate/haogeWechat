@@ -1,1 +1,50 @@
-/* pages/game/game.wxss */
+.date-title {
+    width:100%;
+    height:80rpx;
+    background-color:#efdcb2;
+}
+.date-title-container {
+    width:95%;
+    height:100%;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    margin:0 auto;
+}
+.date-title-container view {
+    font-size:28rpx;
+    display:flex;
+    align-items:center;
+}
+.weekday {
+    width:100%;
+    height:80rpx;
+    display:flex;
+    flex-direction:row;
+    background-color:gray;
+}
+.weekday view {
+    font-size:28rpx;
+    flex:1;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.date-month {
+    width:100%;
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    margin:0 auto;
+    margin-left:1%;
+}
+.date-unit {
+    width:14%;
+    box-shadow: 1rpx 1rpx 2rpx 2rpx rgba(204, 204, 204, 0.1);
+    height:80rpx;
+    font-size:28rpx;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content:center;
+}
