@@ -48,3 +48,25 @@
     align-items: center;
     justify-content:center;
 }
+/**
+签到按钮
+ */
+.enterButton {
+    width:95%;
+    margin:0 auto;
+}
+.enterButton button {
+    width:100% !important;
+    background-color:#FFB800;
+    color:white;
+}
+.enterImg {
+    width:12%;
+    height:80rpx;
+    position:absolute;
+    z-index:1;
+}
+.enterImg image {
+    width:100%;
+    height:100%;
+}

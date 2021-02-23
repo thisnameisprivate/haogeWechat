@@ -1,7 +1,7 @@
 <view class="date-title">
     <view class="date-title-container">
         <view>{{ todayTime }}</view>
-        <view>本月已签到xx天</view>
+        <view>本月已签到{{ enterDay }}天</view>
     </view>
 </view>
 <view class="date-month">
@@ -13,8 +13,14 @@
         <view></view>
         <view></view>
     </view>
-    <view class="date-unit" wx:for="{{ monthNum }}" style="{{ item.date == date?'background-color:green':'' }}">
+    <view class="date-unit" wx:for="{{ monthNum }}" style="{{ item.date == date?'background-color:#FFB800':'' }}">
         <view>{{ item.day }}</view>
         <view>{{ item.date }}</view>
+        <view class="enterImg">
+            <image src="{{ item.image?'../../images/titleImage/enterToday.png':'' }}"></image>
+        </view>
     </view>
+</view>
+<view class="enterButton">
+    <button bindtap="enterButtonHandle">{{ enterButton?"今日已签到":"签到" }}</button>
 </view>
