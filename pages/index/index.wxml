@@ -127,7 +127,7 @@
       <block wx:for="{{ msgList }}">
         <navigator url="/pages/index/index?title={{item.url}}">
           <swiper-item>
-            <view class="swiper_item">{{ item.title }}</view>
+            <view class="swiper_item"><text style="color:red;">公告</text>：{{ item.title }}</view>
           </swiper-item>
         </navigator>
       </block>
@@ -145,7 +145,7 @@
     </view>
     <view class="advisoryAdv-center">
       <view class="msgImage">
-        <image src="{{ msgTodayOne.image }}"></image>
+        <image src="{{ summer }}"></image>
       </view>
         <navigator url="/pages/index/index?title={{ msgTodayOne.url }}">
           <view class="msgTitle">{{ msgTodayOne.title }}</view>
@@ -154,11 +154,11 @@
     <view class="advisoryAdv-bottom">
       <swiper class="swiper_container swiper-today-container" vertical="ture" autoplay="true" circular="true" interval="2000" display-multiple-items="3">
         <block wx:for="{{ msgToday }}">
-          <navigator url="/pages/index/index?title={{item.url}}">
+          <navigator url="../webView/webView?url={{ item.url }}">
             <swiper-item>
               <view>
                 <view class="msgImage">
-                <image src="{{ item.image }}"></image>
+                <image src="{{ summer }}"></image>
               </view>
               <view class="msgTitle swiper_item swiper-today-item">{{ item.title }}</view>
               </view>

@@ -12,7 +12,8 @@
     "pages/getworker/getworker",
     "pages/toHouse/toHouse",
     "pages/renovation/renovation",
-    "pages/secondHand/secondHand"
+    "pages/secondHand/secondHand",
+    "pages/webView/webView"
   ],
 
   "permission":{

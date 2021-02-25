@@ -20,6 +20,8 @@ Page({
         "../../images/02.jpg",
         "../../images/03.jpg"
     ],
+    // 热点图标
+    summer: '../../images/titleImage/summer.png',
     /**
      * 
      * 首页上部title图片
@@ -120,7 +122,34 @@ Page({
    */
   onLoad: function () {
     var that = this
-    // 获取当前经纬度 
+    /* 今日热搜 */
+    wx.request({
+      url: 'https://v.juhe.cn/toutiao/index?type=shehui&key=f25a49584f37cdbcce872973abd8471f',
+      method: 'post',
+      header: {
+        'content-type': 'application/json',
+      },
+      success: function (data) {
+        that.setData({
+          msgToday: data.data.result.data,
+          msgTodayOne: data.data.result.data[0]
+        })
+      }
+    });
+    // 你可能想知道的
+    wx.request({
+      url: 'https://v.juhe.cn/toutiao/index?type=junshi&key=f25a49584f37cdbcce872973abd8471f',
+      method: 'post',
+      header: {
+        'content-type': 'application/json'
+      },
+      success: function (data) {
+        that.setData({
+          msgList: data.data.result.data
+        })
+      }
+    });
+    // 获取当前经纬度
     wx.getLocation ({
       type: 'gcj02',
       success: function (res) {
@@ -151,42 +180,6 @@ Page({
             })
           }
         })
-      }
-    })
-    /**
-     * 
-     * 新闻测试信息， 
-     * Request server get news data
-     * 
-     */ 
-    that.setData ({
-      msgList:[
-        {"url": 'url', "title": '公告：多地首套房贷利率上浮 热点城市渐迎零折扣时代'},
-        {"url": 'url', "title": '公告：悦如公寓三周年生日趴邀你免费吃喝欢唱'},
-        {"url": 'url', "title": '公告：你想和一群有志青年一起过生日嘛？'}
-      ]
-    })
-    /**
-     * 今日热搜信息测试
-     */
-    that.setData({
-      msgToday: [
-        {"url": "url", "title": "习近平“达沃斯议程”特别致辞金句 全面从严治党", "image": "../../images/titleImage/One.png", "redu": "299"},
-        {"url": "url", "title": "奋斗百年路 启航新征程 2021新春走基层 理上网来", "image": "../../images/titleImage/two.png"},
-        {"url": "url", "title": "节后返岗因疫情滞留算旷工吗?往返途中感染算工伤吗?", "image": "../../images/titleImage/three.png"},
-        {"url": "url", "title": "女子服退烧药回国后确诊新冠致63人被隔离 被判缓刑", "image": "../../images/titleImage/four.png"},
-        {"url": "url", "title": "中美军机敏感空域“打个照面”！"},
-      ],
-    })
-    /**
-     * 今日热搜top one
-     */
-    that.setData({
-      msgTodayOne: {
-        "url": "url",
-        "title": "习近平：让多边主义的火炬照亮人类前行之路",
-        "image": "../../images/titleImage/topOne.png",
-        "redu": "299"
       },
     })
   },
