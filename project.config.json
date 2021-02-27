@@ -106,6 +106,12 @@
                 {
                     "name": "pages/game/game",
                     "pathName": "pages/game/game",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/my/my",
+                    "pathName": "pages/my/my",
                     "scene": null
                 }
             ]

@@ -1,2 +1,111 @@
-<!--pages/my/my.wxml-->
-<text>pages/my/my.wxml</text>
+<view class="topTitle">
+    <view class="topMap" bindtap="getgps">
+        <view class="topMapImg">
+            <image src="{{ mapImg }}"></image>
+        </view>
+        <view class="topMapText">
+            {{ Mapres }}
+        </view>
+    </view>
+    <view class="topSearch" bindtap="bindsearch">
+        <view class="searchImg">
+            <image src="{{ searchImg }}"></image>
+        </view>
+        <view class="searchText">
+            搜索你想知道的
+        </view>
+    </view>
+</view>
+<!-- 获取用户信息按钮层  -->
+<button style="{{ userInfo?'display:none':'' }}" wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo"></button>
+<!-- 用户头像昵称 -->
+<view class="userInfo">
+    <view class="userInfo-left">
+        <view class="userImg">
+            <image src="{{ userInfo.avatarUrl }}"></image>
+        </view>
+        <view class="username">{{ userInfo.nickName?userInfo.nickName:'未登陆' }}</view>
+    </view>
+    <view class="userInfo-right">
+        <view class="moneyImg">
+            <image src="../../images/my/my01.png"></image>
+        </view>
+        <view class="money">余额</view>
+    </view>
+</view>
+<view class="shop-title">
+    <view class="title-enter">
+        <view class="title-enter-unit">
+            <view>
+                <image src="../../images/my/my02.png"></image>
+            </view>
+            <view>商城订单</view>
+        </view>
+        <view class="title-enter-unit">
+            <view>
+                <image src="../../images/my/my03.png"></image>
+            </view>
+            <view>优惠券</view>
+        </view>
+        <view class="title-enter-unit">
+            <view>
+                <image src="../../images/my/my04.png"></image>
+            </view>
+            <view>红包</view>
+        </view>
+        <view class="title-enter-unit">
+            <view>
+                <image src="../../images/my/my05.png"></image>
+            </view>
+            <view>全部订单</view>
+        </view>
+    </view>
+    <view class="title-enter-font">
+        <view class="title-enter-font-context">
+            找不到订单和优惠券? 绑定手机号试试
+            <view>立即绑定</view>
+        </view>
+    </view>
+</view>
+<!-- 背景颜色  -->
+<view class="bg">
+</view>
+
+<view class="username-data">
+    <view class="username-top">
+        <view class="username-data-unit">
+            <view>我的视频</view>
+            <view> > </view>
+        </view>
+        <view class="username-data-unit">
+            <view>我的发布</view>
+            <view> > </view>
+        </view>
+        <view class="username-data-unit">
+            <view>我的收藏</view>
+            <view> > </view>
+        </view>
+    </view>
+    <view class="username-bottom">
+        <view class="username-data-unit">
+            <view>领劵中心</view>
+            <view> > </view>
+        </view>
+        <view class="username-data-unit">
+            <view>联系客服</view>
+            <view> > </view>
+        </view>
+        <view class="username-data-unit">
+            <view>个人设置</view>
+            <view> > </view>
+        </view>
+        <view class="username-data-unit">
+            <view>意见反馈</view>
+            <view> > </view>
+        </view>
+        <view class="username-data-unit">
+            <view>协议及声明</view>
+            <view> > </view>
+        </view>
+    </view>
+</view>
