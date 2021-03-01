@@ -63,7 +63,9 @@
     <view class="title-enter-font">
         <view class="title-enter-font-context">
             找不到订单和优惠券? 绑定手机号试试
-            <view>立即绑定</view>
+            <view>
+                立即绑定
+            </view>
         </view>
     </view>
 </view>
