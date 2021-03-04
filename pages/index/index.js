@@ -122,7 +122,7 @@ Page({
    */
   onLoad: function () {
     var that = this
-    /* 今日热搜 */
+    // 今日热搜标题
     wx.request({
       url: 'https://v.juhe.cn/toutiao/index?type=shehui&key=f25a49584f37cdbcce872973abd8471f',
       method: 'post',
@@ -136,7 +136,7 @@ Page({
         })
       }
     });
-    // 你可能想知道的
+    // 你可能想知道的新闻标题
     wx.request({
       url: 'https://v.juhe.cn/toutiao/index?type=junshi&key=f25a49584f37cdbcce872973abd8471f',
       method: 'post',
@@ -280,5 +280,15 @@ Page({
       mask:false
     })
     console.log(this.data.reachBottom)
+  },
+  /**
+   * 跳转到内部新闻页面
+   *
+   */
+  getNewsData: function (events) {
+    if (events.currentTarget.dataset.url == null) return;
+    wx.navigateTo({
+      url: '../webView/webView?url=' + events.currentTarget.dataset.url
+    })
   }
 })
