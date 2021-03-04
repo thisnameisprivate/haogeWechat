@@ -13,7 +13,7 @@ Page({
      */
     onLoad: function (events) {
         let that = this;
-        // 以POST方式发送当前点击的新闻链接
+        // 渲染当前点击的新闻标题链接
         that.setData({
             url: 'https://wecm.schaoge.cn/index.php?url=' + events.url
         })
