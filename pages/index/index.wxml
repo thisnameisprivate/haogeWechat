@@ -98,7 +98,7 @@
         <image src="{{ titleImagewzk }}"></image>
       </view>
       <view class="contact-container">
-        <button open-type="contact"></button>
+        <button open-type="contact" style="position: relative; left: -436rpx; top: -24rpx"></button>
       </view>
       <view class="title-text">
         问知客
@@ -145,9 +145,7 @@
       <view class="msgImage">
         <image src="{{ summer }}"></image>
       </view>
-        <navigator url="/pages/index/index?title={{ msgTodayOne.url }}">
-          <view class="msgTitle">{{ msgTodayOne.title }}</view>
-        </navigator>
+          <view class="msgTitle" bindtap="getNewsData" data-url="{{ msgTodayOne.url }}">{{ msgTodayOne.title }}</view>
     </view>
     <view class="advisoryAdv-bottom">
       <swiper class="swiper_container swiper-today-container" vertical="ture" autoplay="true" circular="true" interval="2000" display-multiple-items="3">

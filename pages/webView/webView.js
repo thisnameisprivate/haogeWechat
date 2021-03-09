@@ -13,9 +13,17 @@ Page({
      */
     onLoad: function (events) {
         let that = this;
-        // 渲染当前点击的新闻标题链接
-        that.setData({
-            url: 'https://wecm.schaoge.cn/index.php?url=' + events.url
+        wx.request({
+            url: 'https://wecm.schaoge.cn/index.php',
+            method: 'GET',
+            data: {
+                'url': events.url.split('//')[1]
+            },
+            success: function (res) {
+                that.setData({
+                    url: 'https://wecm.schaoge.cn/news/' + res.data + '.html'
+                })
+            }
         })
     },
 })

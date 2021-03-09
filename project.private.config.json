@@ -69,7 +69,7 @@
                 {
                     "name": "pages/webView/webView",
                     "pathName": "pages/webView/webView",
-                    "query": "url=m.baidu.com",
+                    "query": "url=https://wecm.schaoge.cn/news/1614925084.html",
                     "scene": null
                 }
             ]

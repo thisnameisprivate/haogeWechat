@@ -4,5 +4,7 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="wechatCurlnews" />
+    <orderEntry type="module" module-name="今日运气wechat" />
   </component>
 </module>

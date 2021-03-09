@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/miniprogram-1.iml" filepath="$PROJECT_DIR$/.idea/miniprogram-1.iml" />
+      <module fileurl="file://D:/wampserver/www/wechatCurlnews/.idea/wechatCurlnews.iml" filepath="D:/wampserver/www/wechatCurlnews/.idea/wechatCurlnews.iml" />
+      <module fileurl="file://D:/wampserver/www/今日运气wechat/.idea/今日运气wechat.iml" filepath="D:/wampserver/www/今日运气wechat/.idea/今日运气wechat.iml" />
     </modules>
   </component>
 </project>
